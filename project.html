@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Manager</title>
+  <link rel='stylesheet' id='torindriveintl-bootstrap-style-css'  href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' type='text/css' media='all' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' id='torindriveintl-projectManager-style-css'  href='/projects/resources/css/project-manager.css' type='text/css' media='all' />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<p class="table-top-h1"> Manage Orders:</p>
+<div class="filter-container">   <!-- Start of Top Filter -->
+  <div class="filter-item">
+    <select name="created_at"  class="button_example form-control" id="date">
+      <option value="all">Date Submitted: All</option>
+      <option value="01">JAN</option>
+      <option value="02">FEB</option>
+      <option value="03">MAR</option>
+      <option value="04">APR</option>
+      <option value="05">MAY</option>
+      <option value="06">JUNE</option>
+      <option value="07">JULY</option>
+      <option value="08">AUG</option>
+      <option value="09">SEPT</option>
+      <option value="10">OCT</option>
+      <option value="11">NOV</option>
+      <option value="12">DEC</option>
+    </select>
+  </div>
+  <div class="filter-item">
+    <select  class="button_example form-control" name="project_name" id="job-name">
+      <option value="all" selected>Order Item: All</option>
+      <option value="Cleanser">Cleanser</option>
+      <option value="Conditioner">Conditioner</option>
+      <option value="Eye Cream">Eye Cream</option>
+      <option value="Hand Cream">Hand Cream</option>
+      <option value="Lotion">Lotion</option>
+      <option value="Serum">Serum</option>
+      <option value="Shampoo">Shampoo</option>
+      <option value="Sun Screen">Sun Screen</option>
+      <option value="Toner">Toner</option>
+    </select>
+  </div>
+  <div class="filter-item">
+    <select  class="button_example form-control" name="contact_name_1" id="contact-name">
+      <option value="all" selected>Customer Name: All</option>
+      <option value="Ben Wong">Ben Wong</option>
+      <option value="Jenny Song">Jenny Song</option>
+      <option value="Jessica Maxey">Jessica Maxey</option>
+      <option value="Jimmy He">Jimmy He</option>
+      <option value="Lee Hana">Lee Hana</option>
+      <option value="Morgan Jones">Morgan Jones</option>
+      <option value="Peter Zhang">Peter Zhang</option>
+      <option value="Tony Chen">Tony Chen</option>
+    </select>
+  </div>
+  <div class="filter-item">
+    <select  class="button_example consultant form-control" name="consultant_name" id="consultant-name">
+      <option value="all">Consultant: All</option>
+      <option value="Bath and Body">Bath and Body</option>
+      <option value="MAC">MAC</option>
+      <option value="Sephora">Sephora</option>
+      <option value="Sally Beauty">Sally Beauty</option>
+      <option value="Ulta Beauty">Ulta Beauty</option>
+    </select>
+  </div>
+  <div class="filter-item">
+    <select  class="button_example form-control" name="city" id="city-name">
+      <option value="all">City: All</option>
+      <option value="Beckley">Beckley</option>
+      <option value="Buffalo">Buffalo</option>
+      <option value="Dallas">Dallas</option>
+      <option value="Fairbanks">Fairbanks</option>
+      <option value="Indianapolis">Indianapolis</option>
+      <option value="Memphis">Memphis</option>
+      <option value="Montgomery">Montgomery</option>
+      <option value="Phoenix">Phoenix</option>
+      <option value="San Jose">San Jose</option>
+      <option value="Seattle">Seattle</option>
+      <option value="Tulsa">Tulsa</option>
+    </select>
+  </div>
+  <div class="filter-item">
+    <select  class="button_example form-control" id="state-name" name="state">
+      <option value="all">State: All</option>
+      <option value="Alabama">USA - Alabama</option>
+      <option value="Alberta">Canada - Alberta</option>
+      <option value="Alaska">USA - Alaska</option>
+      <option value="American Samoa">USA - American Samoa</option>
+      <option value="Arizona">USA - Arizona</option>
+      <option value="Arkansas">USA - Arkansas</option>
+      <option value="British Columbia">Canada - British Columbia</option>
+      <option value="California">USA - California</option>
+      <option value="Colorado">USA - Colorado</option>
+      <option value="Connecticut">USA - Connecticut</option>
+      <option value="Delaware">USA - Delaware</option>
+      <option value="District Of Columbia">USA - District Of Columbia</option>
+      <option value="Federated States Of Micronesia">USA - Federated States Of Micronesia</option>
+      <option value="Florida">USA - Florida</option>
+      <option value="Georgia">USA - Georgia</option>
+      <option value="Guam">USA - Guam</option>
+      <option value="Hawaii">USA - Hawaii</option>
+      <option value="Idaho">USA - Idaho</option>
+      <option value="Illinois">USA - Illinois</option>
+      <option value="Indiana">USA - Indiana</option>
+      <option value="Iowa">USA - Iowa</option>
+      <option value="Kansas">USA - Kansas</option>
+      <option value="Kentucky">USA - Kentucky</option>
+      <option value="Louisiana">USA - Louisiana</option>
+      <option value="Maine">USA - Maine</option>
+      <option value="Manitoba">Canada - Manitoba</option>
+      <option value="Marshall Islands">USA - Marshall Islands</option>
+      <option value="Maryland">USA - Maryland</option>
+      <option value="Massachusetts">USA - Massachusetts</option>
+      <option value="Michigan">USA - Michigan</option>
+      <option value="Minnesota">USA - Minnesota</option>
+      <option value="Mississippi">USA - Mississippi</option>
+      <option value="Missouri">USA - Missouri</option>
+      <option value="Montana">USA - Montana</option>
+      <option value="Nebraska">USA - Nebraska</option>
+      <option value="Nevada">USA - Nevada</option>
+      <option value="New Brunswick">Canada - New Brunswick</option>
+      <option value="New Hampshire">USA - New Hampshire</option>
+      <option value="New Jersey">USA - New Jersey</option>
+      <option value="New Mexico">USA - New Mexico</option>
+      <option value="New York">USA - New York</option>
+      <option value="Newfoundland and Labrador">Canada - Newfoundland and Labrador</option>
+      <option value="North Carolina">USA - North Carolina</option>
+      <option value="North Dakota">USA - North Dakota</option>
+      <option value="Northern Mariana Islands">USA - Northern Mariana Islands</option>
+      <option value="Nova Scotia">Canada - Nova Scotia</option>
+      <option value="Northwest Territories">Canada - Northwest Territories</option>
+      <option value="Nunavut">Canada - Nunavut</option>
+      <option value="Ohio">USA - Ohio</option>
+      <option value="Oklahoma">USA - Oklahoma</option>
+      <option value="Ontario">Canada - Ontario</option>
+      <option value="Oregon">USA - Oregon</option>
+      <option value="Palau">USA - Palau</option>
+      <option value="Pennsylvania">USA - Pennsylvania</option>
+      <option value="Prince Edward Island">Canada - Prince Edward Island</option>
+      <option value="Puerto Rico">USA - Puerto Rico</option>
+      <option value="Quebec">Canada - Quebec</option>
+      <option value="Rhode Island">USA - Rhode Island</option>
+      <option value="Saskatchewan">Canada - Saskatchewan</option>
+      <option value="South Carolina">USA - South Carolina</option>
+      <option value="South Dakota">USA - South Dakota</option>
+      <option value="Tennessee">USA - Tennessee</option>
+      <option value="Texas">USA - Texas</option>
+      <option value="Utah">USA - Utah</option>
+      <option value="Vermont">USA - Vermont</option>
+      <option value="Virgin Islands">USA - Virgin Islands</option>
+      <option value="Virginia">USA - Virginia</option>
+      <option value="Washington">USA - Washington</option>
+      <option value="West Virginia">USA - West Virginia</option>
+      <option value="Wisconsin">USA - Wisconsin</option>
+      <option value="Wyoming">USA - Wyoming</option>
+      <option value="Yukon">Canada - Yukon</option>
+    </select>
+  </div>
+  <div class="filter-item">
+    <select  class="button_example form-control" name="status-condition" id="status-name">
+      <option value="all">Status: All</option>
+      <option value="INITIAL">INITIAL</option>
+      <option value="REMOVED">REMOVED</option>
+      <option value="PURCHASED">PURCHASED</option>
+      <option value="CUSTOM">CUSTOM</option>
+    </select>
+  </div>
+</div>  <!-- End of Top Filter -->
+
+<div class="table-wrapper cust-scrollbar" id="style-2">
+  <table class="table tablesorter" id="customer-tbl">
+    <thead class="thead-inverse">
+      <tr style="background-color: black; color: white" id="filter-title-wrap">
+        <th class="filter-title">Order #<img class="icon" id="icon1" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">Order Date<img class="icon" id="icon2" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">Order Item<img class="icon" id="icon3" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">Customer Name<img class="icon" id="icon4" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">Shopping Consultant<img class="icon" id="icon5" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">City<img class="icon" id="icon6" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">State<img class="icon" id="icon7" src="/projects/resources/img/sort_both.png" /></th>
+        <th class="filter-title">Amount<img class="icon" id="icon9" src="/projects/resources/img/sort_both.png" /></th>
+
+      </tr>
+    </thead>
+    <tbody id="grid_body">
+
+        <tr class="row-vm"> <!-- Case #SONG-180043 -->
+          <td class="view-survey csv-data">SONG-180043
+              <a class="initial btn btn-primary csv-data status" style="color: white; cursor: default;">INITIAL</a>
+          </td>
+          <td class="csv-data submit-month">11-13-2018</td>
+          <td class="csv-data job">Toner</td>
+          <td class="csv-data contact">Jenny Song</td>
+          <td class="csv-data consultant">Sephora</td>
+          <td class="csv-data city">Tulsa</td>
+          <td class="csv-data state-text"><span>Oklahoma</span><br>
+            <a href="/projects/section2.html" class="request-final"> Request Final</a>
+          </td>
+          <td class="csv-data amt-data">$834<br>
+            <a href="#" target="_blank" class="underline">Initial PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180042 -->
+          <td class="view-survey csv-data">SONG-180042
+            <a class="final btn btn-warning csv-data status" style="color: white; cursor: default;">PURCHASED</a>
+          </td>
+          <td class="csv-data submit-month">01-01-2018</td>
+          <td class="csv-data job">Lotion</td>
+          <td class="csv-data contact">Peter Zhang</td>
+          <td class="csv-data consultant">Sephora</td>
+          <td class="csv-data city">Beckley</td>
+          <td class="csv-data state-text"><span>West Virginia</span><br>
+            <a href="/projects/section2.html" class="request-final"> Edit Final</a>
+          </td>
+          <td class="csv-data amt-data">$19<br>
+            <a href="#" target="_blank" class="underline">Final PDF</a>
+          </td>
+        </tr>
+
+      <tr class="row-vm"> <!-- Case #SONG-180041 -->
+        <td class="view-survey csv-data">SONG-180041
+          <a class="initial btn btn-primary csv-data status" style="color: white; cursor: default;" style="cursor: default;">INITIAL</a>
+        </td>
+        <td class="csv-data submit-month">10-02-2018</td>
+        <td class="csv-data job">Hand Cream</td>
+        <td class="csv-data contact">Ben Wong</td>
+        <td class="csv-data consultant">Ulta Beauty</td>
+        <td class="csv-data city">Montgomery</td>
+        <td class="csv-data state-text"><span>Alabama</span><br>
+          <a href="/projects/section2.html" class="request-final"> Request Final</a>
+        </td>
+        <td class="csv-data amt-data">$497<br>
+          <a href="#" target="_blank" class="underline">Initial PDF</a>
+        </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180040 -->
+          <td class="view-survey csv-data">SONG-180040
+            <a class="custom btn csv-data status" style="color: white; cursor: default;">CUSTOM</a>
+          </td>
+          <td class="csv-data submit-month">09-24-2018</td>
+          <td class="csv-data job">Cleanser</td>
+          <td class="csv-data contact">Tony Chen</td>
+          <td class="csv-data consultant">Bath and Body</td>
+          <td class="csv-data city">Phoenix</td>
+          <td class="csv-data state-text"><span>Arkansas</span></td>
+          <td class="csv-data amt-data">$66<br>
+            <a href="#" class="underline delete"> Remove Inquiry</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180039 -->
+          <td class="view-survey csv-data">SONG-180039
+            <a class="initial btn btn-primary csv-data status" style="color: white; cursor: default;" style="cursor: default;">INITIAL</a>
+          </td>
+          <td class="csv-data submit-month">08-20-2018</td>
+          <td class="csv-data job">Cleanser</td>
+          <td class="csv-data contact">Jimmy He</td>
+          <td class="csv-data consultant">MAC</td>
+          <td class="csv-data city">Dallas</td>
+          <td class="csv-data state-text"><span>Texas</span><br>
+            <a href="/projects/section2.html" class="request-final"> Request Final</a>
+          </td>
+          <td class="csv-data amt-data">$503<br>
+            <a target="_blank" href="#" class="underline">Initial PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180038 -->
+          <td class="view-survey csv-data">SONG-180038
+            <a class="initial btn btn-primary csv-data status" style="color: white; cursor: default;" style="cursor: default;">INITIAL</a>
+          </td>
+          <td class="csv-data submit-month">07-11-2018</td>
+          <td class="csv-data job">Sun Screen</td>
+          <td class="csv-data contact">Jenny Song</td>
+          <td class="csv-data consultant">Sally Beauty</td>
+          <td class="csv-data city">Indianapolis</td>
+          <td class="csv-data state-text"><span>Indiana</span><br>
+            <a href="/projects/section2.html" class="request-final"> Request Final</a>
+          </td>
+          <td class="csv-data amt-data">$130<br>
+            <a target="_blank" href="#" class="underline">Initial PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180037 -->
+          <td class="view-survey csv-data">SONG-180037
+              <a class="final btn btn-warning csv-data status" style="color: white; cursor: default;">PURCHASED</a>
+          </td>
+          <td class="csv-data submit-month">06-07-2018</td>
+          <td class="csv-data job">Hand Cream</td>
+          <td class="csv-data contact">Jenny Song</td>
+          <td class="csv-data consultant">Sally Beauty</td>
+          <td class="csv-data city">Seattle</td>
+          <td class="csv-data state-text"><span>Washington</span><br>
+            <a href="/projects/section2.html" class="request-final"> Edit Final</a>
+          </td>
+          <td class="csv-data amt-data">$426<br>
+            <a target="_blank" href="#" class="underline">Final PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180035 -->
+          <td class="view-survey csv-data">SONG-180035
+            <a class="initial btn btn-primary csv-data status" style="color: white; cursor: default;" style="cursor: default;">INITIAL</a>
+          </td>
+          <td class="csv-data submit-month">06-02-2018</td>
+          <td class="csv-data job">Eye Cream</td>
+          <td class="csv-data contact">Peter Zhang</td>
+          <td class="csv-data consultant">MAC</td>
+          <td class="csv-data city">San Jose</td>
+          <td class="csv-data state-text"><span>California</span><br>
+            <a href="/projects/section2.html" class="request-final"> Request Final</a>
+          </td>
+          <td class="csv-data amt-data">$768<br>
+            <a target="_blank" href="#" class="underline">Initial PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180034 -->
+          <td class="view-survey csv-data">SONG-180034
+            <a class="initial btn btn-primary csv-data status" style="color: white; cursor: default;" style="cursor: default;">INITIAL</a>
+          </td>
+          <td class="csv-data submit-month">05-02-2018</td>
+          <td class="csv-data job">Serum</td>
+          <td class="csv-data contact">Lee Hana</td>
+          <td class="csv-data consultant">Bath and Body</td>
+          <td class="csv-data city">Seattle</td>
+          <td class="csv-data state-text"><span>Washington</span><br>
+            <a href="/projects/section2.html" class="request-final"> Request Final</a>
+          </td>
+          <td class="csv-data amt-data">$527<br>
+            <a target="_blank" href="#" class="underline">Initial PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180033 -->
+          <td class="view-survey csv-data">SONG-180033
+              <a class="final btn btn-warning csv-data status" style="color: white; cursor: default;">PURCHASED</a>
+          </td>
+          <td class="csv-data submit-month">03-29-2018</td>
+          <td class="csv-data job">Shampoo</td>
+          <td class="csv-data contact">Jessica Maxey</td>
+          <td class="csv-data consultant">Ulta Beauty</td>
+          <td class="csv-data city">Fairbanks</td>
+          <td class="csv-data state-text"><span>Alaska</span><br>
+            <a href="/projects/section2.html" class="request-final"> Edit Final</a>
+          </td>
+          <td class="csv-data amt-data">$676<br>
+            <a target="_blank" href="#" class="underline">Final PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180031 -->
+          <td class="view-survey csv-data">SONG-180031
+            <a class="final btn btn-warning csv-data status" style="color: white; cursor: default;">PURCHASED</a>
+          </td>
+          <td class="csv-data submit-month">04-29-2018</td>
+          <td class="csv-data job">Conditioner</td>
+          <td class="csv-data contact">Morgan Jones</td>
+          <td class="csv-data consultant">Sephora</td>
+          <td class="csv-data city">San Jose</td>
+          <td class="csv-data state-text"><span>California</span><br>
+            <a href="/projects/section2.html" class="request-final"> Edit Final</a>
+          </td>
+          <td class="csv-data amt-data">$28<br>
+            <a target="_blank" href="#" class="underline">Final PDF</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180009 -->
+          <td class="view-survey csv-data">SONG-180009
+            <a class="custom btn custom csv-data status" style="color: white; cursor: default;">CUSTOM</a>
+          </td>
+          <td class="csv-data submit-month">02-10-2018</td>
+          <td class="csv-data job">Cleanser</td>
+          <td class="csv-data contact">Peter Zhang</td>
+          <td class="csv-data consultant">MAC</td>
+          <td class="csv-data city">Memphis</td>
+          <td class="csv-data state-text"><span>Tennessee</span></td>
+          <td class="csv-data amt-data">$707<br>
+            <a href="#" class="underline delete"> Remove Inquiry</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180036 -->
+          <td class="view-survey csv-data">SONG-180036
+              <a class="closed btn btn-danger csv-data status" style="color: white; cursor: default;">REMOVED</a>
+          </td>
+          <td class="csv-data submit-month">09-10-2018</td>
+          <td class="csv-data job">Serum</td>
+          <td class="csv-data contact">Jenny Song</td>
+          <td class="csv-data consultant">Bath and Body</td>
+          <td class="csv-data city">Cordova</td>
+          <td class="csv-data state-text"><span>Tennessee</span></td>
+          <td class="csv-data amt-data" value="745">$745<br>
+            <a target="_blank" href="#" class="underline">PDF Download</a>
+          </td>
+        </tr>
+
+        <tr class="row-vm"> <!-- Case #SONG-180005 -->
+          <td class="view-survey csv-data">SONG-180005
+            <a class="closed btn btn-danger csv-data status" style="color: white; cursor: default;">REMOVED</a>
+          </td>
+          <td class="csv-data submit-month">02-06-2018</td>
+          <td class="csv-data job">Serum</td>
+          <td class="csv-data contact">Morgan Jones</td>
+          <td class="csv-data consultant">Sephora</td>
+          <td class="csv-data city">Buffalo</td>
+          <td class="csv-data state-text"><span>New York</span></td>
+          <td class="csv-data amt-data">$0<br>
+              <a target="_blank" href="#" class="underline">PDF Download</a>
+          </td>
+        </tr>
+      </div>
+    </tbody>
+  <table>
+  <div class="d-flex justify-content-center" id = "button-group">
+      <button type="button" name="NewQuote" onclick="location.href='section1.html';" class="btn btn-success btn-lg" id="new-quote">New Quote</button>
+      <button type="button" class="btn btn-warning btn-lg" id="csv">Export To CSV</button>
+  </div>
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+<script src="/projects/resources/js/jquery.tablesorter.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+<script src="/projects/resources/js/project-manager.js"></script>
+</html>

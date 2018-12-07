@@ -1,0 +1,121 @@
+
+/* Added by Jenny Song 11/16/2018 */
+body{
+  width: 80%;
+  margin: auto;
+  margin-top: 20px;
+}
+/* Filter and SearchBar Style */
+.filter-title:hover{
+  cursor: pointer;
+}
+
+.filter-title:nth-child(2),.filter-title:nth-child(4),
+.filter-title:nth-child(5){
+  width: 15%;
+}
+
+.filter-title:nth-child(3), .filter-title:nth-child(7),
+.filter-title:nth-child(8){
+  width: 10%;
+}
+
+.icon{
+  float: right;
+  margin-top: 0.3rem;
+  display: inline;
+}
+
+#searchInput{
+  width: 100%;
+}
+/* Table Content Style */
+thead,tbody{
+  text-align: center;
+}
+
+.status{
+  margin-top: 20px;
+  width: 150%;
+}
+
+.initial, .final, .custom, .closed{
+  float: left;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-top: 20px;
+}
+
+.closed{
+  margin-top: 20px;
+  width: 150%;
+  background-color: #ed1c24;
+}
+
+.custom{
+  background-color: #FF8800;
+}
+
+.custom:hover {
+  background-color: #DD6600;
+}
+
+#new-quote, #csv{
+  margin: 25px;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+
+/* Add By Jenny Song 11/16/2018 */
+.button_example{
+    float: left;
+		width:20%;
+    height: 2.5rem;
+    text-transform: uppercase;
+    background: rgba(253,253,253,1);
+    background: -moz-linear-gradient(top, rgba(253,253,253,1) 0%, rgba(250,250,250,1) 12%, rgba(247,247,247,1) 28%, rgba(234,232,232,1) 49%, rgba(219,217,217,1) 76%, rgba(213,210,210,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(253,253,253,1)), color-stop(12%, rgba(250,250,250,1)), color-stop(28%, rgba(247,247,247,1)), color-stop(49%, rgba(234,232,232,1)), color-stop(76%, rgba(219,217,217,1)), color-stop(100%, rgba(213,210,210,1)));
+    background: -webkit-linear-gradient(top, rgba(253,253,253,1) 0%, rgba(250,250,250,1) 12%, rgba(247,247,247,1) 28%, rgba(234,232,232,1) 49%, rgba(219,217,217,1) 76%, rgba(213,210,210,1) 100%);
+    background: -o-linear-gradient(top, rgba(253,253,253,1) 0%, rgba(250,250,250,1) 12%, rgba(247,247,247,1) 28%, rgba(234,232,232,1) 49%, rgba(219,217,217,1) 76%, rgba(213,210,210,1) 100%);
+    background: -ms-linear-gradient(top, rgba(253,253,253,1) 0%, rgba(250,250,250,1) 12%, rgba(247,247,247,1) 28%, rgba(234,232,232,1) 49%, rgba(219,217,217,1) 76%, rgba(213,210,210,1) 100%);
+    background: linear-gradient(to bottom, rgba(253,253,253,1) 0%, rgba(250,250,250,1) 12%, rgba(247,247,247,1) 28%, rgba(234,232,232,1) 49%, rgba(219,217,217,1) 76%, rgba(213,210,210,1) 100%);
+}
+
+.button_example:hover{
+    border: 1px solid #bbbaba;
+    background: rgba(232,232,232,1);
+    background: -moz-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(230,230,230,1) 19%, rgba(230,230,230,1) 36%, rgba(230,230,230,1) 60%, rgba(230,230,230,1) 81%, rgba(213,210,210,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(232,232,232,1)), color-stop(19%, rgba(230,230,230,1)), color-stop(36%, rgba(230,230,230,1)), color-stop(60%, rgba(230,230,230,1)), color-stop(81%, rgba(230,230,230,1)), color-stop(100%, rgba(213,210,210,1)));
+    background: -webkit-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(230,230,230,1) 19%, rgba(230,230,230,1) 36%, rgba(230,230,230,1) 60%, rgba(230,230,230,1) 81%, rgba(213,210,210,1) 100%);
+    background: -o-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(230,230,230,1) 19%, rgba(230,230,230,1) 36%, rgba(230,230,230,1) 60%, rgba(230,230,230,1) 81%, rgba(213,210,210,1) 100%);
+    background: -ms-linear-gradient(top, rgba(232,232,232,1) 0%, rgba(230,230,230,1) 19%, rgba(230,230,230,1) 36%, rgba(230,230,230,1) 60%, rgba(230,230,230,1) 81%, rgba(213,210,210,1) 100%);
+    background: linear-gradient(to bottom, rgba(232,232,232,1) 0%, rgba(230,230,230,1) 19%, rgba(230,230,230,1) 36%, rgba(230,230,230,1) 60%, rgba(230,230,230,1) 81%, rgba(213,210,210,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8e8e8', endColorstr='#d5d2d2', GradientType=0 );
+}
+
+.table-top-h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 3px;
+    margin-left: 9px;
+}
+
+.request-final{
+    color:#B52C3E;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: underline;
+    letter-spacing: 0.1px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.underline{
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #000;
+    display: block;
+    margin-top: 20px;
+}
